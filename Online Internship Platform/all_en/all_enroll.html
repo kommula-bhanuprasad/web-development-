@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<?php
+
+$servername="localhost";
+$username="root";
+$password="";
+$dbname="db_try_enroll";
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+echo("connection");
+if(isset($_POST['enroll'])){
+	$fname = $_POST['firstname'];
+	$lname = $_POST['lastname'];
+	$email = $_POST['email'];
+	$branch = $_POST['branch'];
+	$domain = $_POST['domain'];
+	$referal = $_POST['referal'];
+	$query = "SELECT * FROM `db_try_enroll` WHERE firstname = '".$fname."' and lastname = '".$lname."' and email= '".$email."' and
+	branch = '".$branch."' and domain = '".$domain."' and referal = '".$referal."'";
+	$result = mysqli_query($conn, $query);
+	if($result){
+	while($row=mysqli_fetch_array($result)){
+	echo '<script type="text/javascript">alert("you register successfully") </script> ';
+	
+	}
+	
+	}
+}
+
+?>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Constructive HTML Template</title>
+<!--
+
+Template 2102 Constructive
+
+http://www.tooplate.com/view/2102-constructive
+
+-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+	<link rel="stylesheet" href="css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<link rel="stylesheet" href="css/tooplate-style.css">
+
+	<script>
+		var renderPage = true;
+
+	if(navigator.userAgent.indexOf('MSIE')!==-1
+		|| navigator.appVersion.indexOf('Trident/') > 0){
+   		/* Microsoft Internet Explorer detected in. */
+   		alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
+   		renderPage = false;
+	}
+	</script>
+	
+	
+	
+	
+	
+	
+<style>	
+
+	body{
+	width:100%;
+	}
+	
+.fo{
+width:100%;
+position:absolute;
+top:50px;
+left:0px;
+overflow:hidden;
+}
+
+	
+.fo div, p {
+	 color: #fff3cd;
+	 text-shadow: 1px 1px 1px #fff;
+	 font-weight:900;
+}
+ .fo form {
+	 padding: 16px;
+	 width: 320px;
+	 margin: 0 auto;
+}
+.fo .segment {
+	 padding: 32px 0;
+	 text-align: center;
+}
+.fo button, input {
+	 border: 0;
+	 outline: 0;
+	 font-size: 16px;
+	 border-radius: 320px;
+	 padding: 16px;
+	 background-color: #12cad6;
+	 text-shadow: 1px 1px 0 #fff;
+}
+.fo label {
+	 display: block;
+	 margin-bottom: 24px;
+	 width: 100%;
+}
+.fo input {
+	 margin-right: 8px;
+	 color:#45046a;
+	 font-weight:900;
+	 letter-spacing:2px;
+	 font-size:20px;
+	 
+	 box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+	 width: 100%;
+	 box-sizing: border-box;
+	 transition: all 0.2s ease-in-out;
+	 appearance: none;
+	 -webkit-appearance: none;
+}
+ .fo input:focus {
+ color:white;
+ 
+ 
+	 box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.fo button {
+	 color: #61677c;
+	 font-weight: bold;
+	 box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+	 transition: all 0.2s ease-in-out;
+	 cursor: pointer;
+	 font-weight: 600;
+}
+.fo button:hover {
+	 box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.fo button:active {
+	 box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.fo button .icon {
+	 margin-right: 8px;
+}
+.fo button.unit {
+	 border-radius: 8px;
+	 line-height: 0;
+	 width: 48px;
+	 height: 48px;
+	 display: inline-flex;
+	 justify-content: center;
+	 align-items: center;
+	 margin: 0 8px;
+	 font-size: 19.2px;
+}
+
+
+
+ 
+ .fo form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.fo a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.fo a span {
+  position: absolute;
+  display: block;
+}
+
+.fo a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+.fo a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.fo a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.fo a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+
+
+
+
+
+@media screen and (min-width: 800px) {
+	
+	
+.fo div, p {
+	 color: #fff3cd;
+	 text-shadow: 1px 1px 1px #fff;
+	 font-weight:900;
+}
+ .fo form {
+	 padding: 16px;
+	 width: 320px;
+	 margin: 0 auto;
+}
+.fo .segment {
+	 padding: 32px 0;
+	 text-align: center;
+}
+.fo button, input {
+	 border: 0;
+	 outline: 0;
+	 font-size: 16px;
+	 border-radius: 320px;
+	 padding: 16px;
+	 background-color: #12cad6;
+	 text-shadow: 1px 1px 0 #fff;
+}
+.fo label {
+	 display: block;
+	 margin-bottom: 24px;
+	 width: 100%;
+}
+.fo input {
+	 margin-right: 8px;
+	 color:#45046a;
+	 font-weight:900;
+	 letter-spacing:2px;
+	 font-size:20px;
+	 
+	 box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+	 width: 100%;
+	 box-sizing: border-box;
+	 transition: all 0.2s ease-in-out;
+	 appearance: none;
+	 -webkit-appearance: none;
+}
+ .fo input:focus {
+ color:white;
+ 
+ 
+	 box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.fo button {
+	 color: #61677c;
+	 font-weight: bold;
+	 box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+	 transition: all 0.2s ease-in-out;
+	 cursor: pointer;
+	 font-weight: 600;
+}
+.fo button:hover {
+	 box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.fo button:active {
+	 box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.fo button .icon {
+	 margin-right: 8px;
+}
+.fo button.unit {
+	 border-radius: 8px;
+	 line-height: 0;
+	 width: 48px;
+	 height: 48px;
+	 display: inline-flex;
+	 justify-content: center;
+	 align-items: center;
+	 margin: 0 8px;
+	 font-size: 19.2px;
+}
+
+
+
+ 
+ .fo form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.fo a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.fo a span {
+  position: absolute;
+  display: block;
+}
+
+.fo a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+.fo a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.fo a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.fo a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+
+.fo{
+	position:relative;
+	left:300px;
+	
+
+}
+}
+
+</style>
+
+<style>
+.fo1{
+width:100%;
+position:absolute;
+top:50px;
+left:0px;
+overflow:hidden;
+}
+
+.fo1 div, p {
+	 color: #fff3cd;
+	 text-shadow: 1px 1px 1px #fff;
+	 font-weight:900;
+}
+ .fo1 form {
+	 padding: 16px;
+	 width: 320px;
+	 margin: 0 auto;
+}
+.fo1 .segment {
+	 padding: 32px 0;
+	 text-align: center;
+}
+.fo1 button, input {
+	 border: 0;
+	 outline: 0;
+	 font-size: 16px;
+	 border-radius: 320px;
+	 padding: 16px;
+	 background-color: #12cad6;
+	 text-shadow: 1px 1px 0 #fff;
+}
+.fo1 label {
+	 display: block;
+	 margin-bottom: 24px;
+	 width: 100%;
+}
+.fo1 input {
+	 margin-right: 8px;
+	 color:#45046a;
+	 font-weight:900;
+	 letter-spacing:2px;
+	 font-size:20px;
+	 
+	 box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+	 width: 100%;
+	 box-sizing: border-box;
+	 transition: all 0.2s ease-in-out;
+	 appearance: none;
+	 -webkit-appearance: none;
+}
+ .fo1 input:focus {
+ color:white;
+
+ 
+	 box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.fo1 button {
+	 color: #61677c;
+	 font-weight: bold;
+	 box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+	 transition: all 0.2s ease-in-out;
+	 cursor: pointer;
+	 font-weight: 600;
+
+}
+.fo1 button:hover {
+	 box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.fo1 button:active {
+	 box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+	 
+}
+.fo1 button .icon {
+	 margin-right: 8px;
+
+}
+.fo1 button.unit {
+	 border-radius: 8px;
+	 line-height: 0;
+	 width: 48px;
+	 height: 48px;
+	 display: inline-flex;
+	 justify-content: center;
+	 align-items: center;
+	 margin: 0 8px;
+	 font-size: 19.2px;
+
+}
+
+
+
+ 
+ .fo1 form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+
+}
+
+.fo1 a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.fo1 a span {
+  position: absolute;
+  display: block;
+}
+
+.fo1 a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+.fo1 a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.fo1 a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.fo1 a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+	@media screen and (min-width: 800px) {
+
+.fo1 div, p {
+	 color: #fff3cd;
+	 text-shadow: 1px 1px 1px #fff;
+	 font-weight:900;
+}
+ .fo1 form {
+	 padding: 16px;
+	 width: 320px;
+	 margin: 0 auto;
+}
+.fo1 .segment {
+	 padding: 32px 0;
+	 text-align: center;
+}
+.fo1 button, input {
+	 border: 0;
+	 outline: 0;
+	 font-size: 16px;
+	 border-radius: 320px;
+	 padding: 16px;
+	 background-color: #12cad6;
+	 text-shadow: 1px 1px 0 #fff;
+}
+.fo1 label {
+	 display: block;
+	 margin-bottom: 24px;
+	 width: 100%;
+}
+.fo1 input {
+	 margin-right: 8px;
+	 color:#45046a;
+	 font-weight:900;
+	 letter-spacing:2px;
+	 font-size:20px;
+	 
+	 box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+	 width: 100%;
+	 box-sizing: border-box;
+	 transition: all 0.2s ease-in-out;
+	 appearance: none;
+	 -webkit-appearance: none;
+}
+ .fo1 input:focus {
+ color:white;
+
+ 
+	 box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.fo1 button {
+	 color: #61677c;
+	 font-weight: bold;
+	 box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+	 transition: all 0.2s ease-in-out;
+	 cursor: pointer;
+	 font-weight: 600;
+
+}
+.fo1 button:hover {
+	 box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.fo1 button:active {
+	 box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+	 
+}
+.fo1 button .icon {
+	 margin-right: 8px;
+
+}
+.fo1 button.unit {
+	 border-radius: 8px;
+	 line-height: 0;
+	 width: 48px;
+	 height: 48px;
+	 display: inline-flex;
+	 justify-content: center;
+	 align-items: center;
+	 margin: 0 8px;
+	 font-size: 19.2px;
+
+}
+
+
+
+ 
+ .fo1 form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+
+}
+
+.fo1 a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.fo1 a span {
+  position: absolute;
+  display: block;
+}
+
+.fo1 a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+.fo1 a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.fo1 a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.fo1 a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+
+.fo1{
+	position:absolute;
+	left:150px;
+	top:110px;
+
+}
+
+}
+
+</style>	
+	
+	<style>
+	
+	.e{
+	position:absolute;
+	top:60px;
+	}
+	
+.lo{
+	
+	height:0px; 
+	width:0px; 
+	position: absolute;
+	top:0px; 
+	left:0px;
+	
+	
+	}
+	
+	
+	
+	
+		@media screen and (min-width: 800px) {
+
+	.e{
+	width:60%;
+	position:absolute;
+	left:470px;
+	top:150px;
+
+	}
+	
+	.lo{
+	
+	height:300px; 
+	width:400px; 
+	position: absolute;
+	top:-115px; 
+	left:750px;
+	
+	
+	}
+	
+	
+	}
+	
+	
+	
+	</style>
+	
+	
+	
+	
+	
+	
+	
+	
+</head>
+
+<body>
+	<!-- Loader -->
+	<div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+	
+	<!-- Page Content -->
+	<div class="container-fluid tm-main">
+		<div class="row tm-main-row">
+
+			<!-- Sidebar -->
+			<div id="tmSideBar" class="col-xl-3 col-lg-4 col-md-12 col-sm-12 sidebar">
+
+				<button id="tmMainNavToggle" class="menu-icon">&#9776;</button>
+
+				<div class="inner">
+					<nav id="tmMainNav" class="tm-main-nav">
+					<img class="lo" src="logo.png" >
+						<ul>
+							<li>
+								<a href="#intro"   id="tmNavLink1" class="scrolly active" data-bg-img="constructive_bg_01.jpg" data-page="#tm-section-1">
+									<i class="fas fa-user tm-nav-fa-icon"></i>
+									<span>Internship Enrollment</span>
+								</a>
+							</li>
+													
+							<li>
+								<a href="#company"  class="scrolly" data-bg-img="constructive_bg_03.jpg" data-page="#tm-section-3">
+									<i class="fas fa-users tm-nav-fa-icon"></i>
+									<span >Campus Envoy Registration</span>
+								</a>
+							</li>
+							<li>
+								<a href="#contact" class="scrolly" data-bg-img="constructive_bg_04.jpg" data-page="#tm-section-4">
+									<i class="fas fa-comments tm-nav-fa-icon"></i>
+									<span>E-IdeaHub</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 tm-content">
+
+					<!-- section 1 -->
+					<section id="tm-section-1" class="tm-section">
+		
+		<div class="fo">				
+
+
+<form action="enroll.php" method="post">
+ 
+  <div class="segment">
+   
+   <h1 style="font-weight:900; color:#eeeeee; letter-spacing:2px;">Internship Enrollment</h1>
+  </div>
+  
+  <label for="username">
+      <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+	  </label>
+	  
+	  <label>
+	      <input  type="text" id="lastname" name="lastname" placeholder="Last Name">
+</label>
+
+  <label>
+    <input type="text" id="email" name="email" placeholder="Email Address"/>
+  </label>
+  
+
+  <label>
+    <input type="text" id="branch" name="branch"  placeholder="Branch "/ >
+  </label>
+  
+  <label>
+    <input type="text" id="domain" name="domain" placeholder="Domain "/ >
+  </label>
+ <!-- <label >
+  <select name="duration" id="duration" class="duration">
+    <option value="volvo">30 days</option>
+    <option value="saab">45 days</option>
+  </select>
+  </label> -->
+  <label>
+    <input type="text" id="referal" name="referal" placeholder=" Campus Envoy Referal ID" />
+  </label>
+  
+   <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    <input type="submit" style="background:white; color:black;" id="enroll" name="enroll" value="ENROLL" />
+    </a>
+  
+ 
+  
+</form> 	
+						</div>
+						</div>
+					</section>
+
+					<!-- section 2 -->
+					<section id="tm-section-3" class="tm-section">						
+<div class="fo1">				
+<form action="register.php" method="post">
+ 
+  <div class="segment">
+    <h1 style="color:#b83b5e; font-weight:900;">Campus Envoy Registration</h1>
+  </div>
+  
+  <label for="username">
+      <input type="text" id="firstname" name="firstname" placeholder="First Name" required>
+	  </label>
+	  
+	  <label>
+	      <input  type="text" id="lastname" name="lastname" placeholder="Last Name">
+</label>
+
+  <label>
+    <input type="text" id="email" name="email" placeholder="Email Address"/>
+  </label>
+  
+
+  <label>
+    <input type="text" id="phoneNO" name="phoneNO"  placeholder="phone no "/ >
+  </label>
+  
+  <label>
+    <input type="phone" id="college" name="college" placeholder="college name "/ >
+  </label>
+ 
+  <label>
+    <input type="text" id="referal" name="referal" value= "<? php echo("AHFG".rand(10,1055));?>" placeholder=" Campus Envoy Unique ID" />
+  </label>
+ 
+   <a href="#">
+      <span ></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    <input type="submit" style="background:white; color:black;" id="enroll" name="enroll" value="ENROLL" />
+    </a>
+  
+ 
+  
+</form> 	
+						</div>
+						</div>
+		
+					</section>
+					
+					
+					
+					<section id="tm-section-4" class="tm-section">
+				
+	<div class="e">
+				
+						<div class="tm-bg-transparent-black tm-contact-box-pad">
+							<div class="row mb-4">
+								<div class="col-sm-12">
+									<header><h2 class="tm-text-shadow" style="color:#ffffdd; font-size:40px; letter-spacing:2px; font-weight:900;" >E-IdeaHub</h2></header>
+								</div>
+							</div>
+							<div class="row tm-page-4-content">
+								<div class="col-md-6 col-sm-12 tm-contact-col">
+									<div class="contact_message">
+									
+			<form action="#contact" method="post" class="contact-form">
+											<div class="form-group">
+												<input type="text" id="fullname" name="fullname" class="form-control" placeholder="Full Name" required>
+											</div>
+											<div class="form-group">
+												<input type="text" id="phone" name="phone" class="form-control" placeholder="phone" required>
+											</div>
+											<div class="form-group">
+												<input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+											</div>
+											<div class="form-group">
+												<textarea id="contact_message" name="contact_message" class="form-control" rows="5" placeholder="Explain About your Idea" required></textarea>
+											</div>
+											
+						<script>
+						var textarea = document.querySelector('textarea');
+
+textarea.addEventListener('keydown', autosize);
+             
+function autosize(){
+  var el = this;
+  setTimeout(function(){
+    el.style.cssText = 'height:auto; padding:0';
+    // for box-sizing other than "content-box" use:
+    // el.style.cssText = '-moz-box-sizing:content-box';
+    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+  },0);
+}
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						</script>
+
+						
+											
+											
+											
+											
+											
+											<button type="submit" class="btn tm-btn-submit tm-btn ml-auto">Submit</button>
+										</form>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-12 tm-contact-col">
+									<div class="tm-address-box">
+										<p style="font-weight:bold; font-size:17px; letter-spacing:2px;"> E-IdeaHub is working 24/7, sorting out the best ideas amongst the numerous ideas recived from our peers from all around the World.<br>
+If your idea is been opted by our E-IdeaHub crew. Then you will be notified for further details about our sponsorship towards your idea.<br>
+Hope you are excited!!</p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+					</section>					
+				</div>	<!-- .tm-content -->							
+
+				
+					
+
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script> <!-- Slick Carousel -->
+
+		<script>
+
+		var sidebarVisible = false;
+		var currentPageID = "#tm-section-1";
+
+		// Setup Carousel
+		function setupCarousel() {
+
+			// If current page isn't Carousel page, don't do anything.
+			if($('#tm-section-2').css('display') == "none") {
+			}
+			else {	// If current page is Carousel page, set up the Carousel.
+
+				var slider = $('.tm-img-slider');
+				var windowWidth = $(window).width();
+
+				if (slider.hasClass('slick-initialized')) {
+					slider.slick('destroy');
+				}
+
+				if(windowWidth < 640) {
+					slider.slick({
+	              		dots: true,
+	              		infinite: false,
+	              		slidesToShow: 1,
+	              		slidesToScroll: 1
+	              	});
+				}
+				else if(windowWidth < 992) {
+					slider.slick({
+	              		dots: true,
+	              		infinite: false,
+	              		slidesToShow: 2,
+	              		slidesToScroll: 1
+	              	});
+				}
+				else {
+					// Slick carousel
+	              	slider.slick({
+	              		dots: true,
+	              		infinite: false,
+	              		slidesToShow: 3,
+	              		slidesToScroll: 2
+	              	});
+				}
+
+				// Init Magnific Popup
+				$('.tm-img-slider').magnificPopup({
+				  delegate: 'a', // child items selector, by clicking on it popup will open
+				  type: 'image',
+				  gallery: {enabled:true}
+				  // other options
+				});
+      		}
+  		}
+
+  		// Setup Nav
+  		function setupNav() {
+  			// Add Event Listener to each Nav item
+	     	$(".tm-main-nav a").click(function(e){
+	     		e.preventDefault();
+		    	
+		    	var currentNavItem = $(this);
+		    	changePage(currentNavItem);
+		    	
+		    	setupCarousel();
+		    	setupFooter();
+
+		    	// Hide the nav on mobile
+		    	$("#tmSideBar").removeClass("show");
+		    });	    
+  		}
+
+  		function changePage(currentNavItem) {
+  			// Update Nav items
+  			$(".tm-main-nav a").removeClass("active");
+     		currentNavItem.addClass("active");
+
+	    	$(currentPageID).hide();
+
+	    	// Show current page
+	    	currentPageID = currentNavItem.data("page");
+	    	$(currentPageID).fadeIn(1000);
+
+	    	// Change background image
+	    	var bgImg = currentNavItem.data("bgImg");
+	    	$.backstretch("img/" + bgImg);		    	
+  		}
+
+  		// Setup Nav Toggle Button
+  		function setupNavToggle() {
+
+			$("#tmMainNavToggle").on("click", function(){
+				$(".sidebar").toggleClass("show");
+			});
+  		}
+
+  		// If there is enough room, stick the footer at the bottom of page content.
+  		// If not, place it after the page content
+  		function setupFooter() {
+  			
+  			var padding = 100;
+  			var footerPadding = 40;
+  			var mainContent = $("section"+currentPageID);
+  			var mainContentHeight = mainContent.outerHeight(true);
+  			var footer = $(".footer-link");
+  			var footerHeight = footer.outerHeight(true);
+  			var totalPageHeight = mainContentHeight + footerHeight + footerPadding + padding;
+  			var windowHeight = $(window).height();		
+
+  			if(totalPageHeight > windowHeight){
+  				$(".tm-content").css("margin-bottom", footerHeight + footerPadding + "px");
+  				footer.css("bottom", footerHeight + "px");  			
+  			}
+  			else {
+  				$(".tm-content").css("margin-bottom", "0");
+  				footer.css("bottom", "20px");  				
+  			}  			
+  		}
+
+  		// Everything is loaded including images.
+      	$(window).on("load", function(){
+
+      		// Render the page on modern browser only.
+      		if(renderPage) {
+				// Remove loader
+		      	$('body').addClass('loaded');
+
+		      	// Page transition
+		      	var allPages = $(".tm-section");
+
+		      	// Handle click of "Continue", which changes to next page
+		      	// The link contains data-nav-link attribute, which holds the nav item ID
+		      	// Nav item ID is then used to access and trigger click on the corresponding nav item
+		      	var linkToAnotherPage = $("a.tm-btn[data-nav-link]");
+			    
+			    if(linkToAnotherPage != null) {
+			    	
+			    	linkToAnotherPage.on("click", function(){
+			    		var navItemToHighlight = linkToAnotherPage.data("navLink");
+			    		$("a" + navItemToHighlight).click();
+			    	});
+			    }
+		      	
+		      	// Hide all pages
+		      	allPages.hide();
+
+		      	$("#tm-section-1").fadeIn();
+
+		     	// Set up background first page
+		     	var bgImg = $("#tmNavLink1").data("bgImg");
+		     	
+		     	$.backstretch("img/" + bgImg, {fade: 500});
+
+		     	// Setup Carousel, Nav, and Nav Toggle
+			    setupCarousel();
+			    setupNav();
+			    setupNavToggle();
+			    setupFooter();
+
+			    // Resize Carousel upon window resize
+			    $(window).resize(function() {
+			    	setupCarousel();
+			    	setupFooter();
+			    });
+      		}	      	
+		});
+
+		</script>
+	</body>
+</html>
