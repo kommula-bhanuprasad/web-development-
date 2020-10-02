@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>EvoloveX</title>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<!-- bootstrap css -->
+<!-- Site css -->
+<link rel="stylesheet" href="css/style.css" />
+<!-- responsive css -->
+<!-- colors css -->
+<link rel="stylesheet" href="css/colors1.css" />
+
+<link rel="stylesheet" type="text/css" href="revolution/css/settings.css" />
+<link rel="stylesheet" type="text/css" href="revolution/css/layers.css" />
+<link rel="stylesheet" type="text/css" href="revolution/css/navigation.css" />
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+<link rel="stylesheet" href="style.css">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script> 
+<script>
+
+	
+$(document).ready(function(){
+	// options
+	var speed = 350; //transition speed - fade
+	var autoswitch = true; //auto slider options
+	var autoswitch_speed = 5000; //auto slider speed
+	
+	// add first initial active class
+	$(".slide").first().addClass("active");
+	
+	// hide all slides
+	$(".slide").hide;
+	
+	// show only active class slide
+	$(".active").show();
+	
+	// Next Event Handler
+	$('#next').on('click', nextSlide);// call function nextSlide
+	
+	// Prev Event Handler
+	$('#prev').on('click', prevSlide);// call function prevSlide
+	
+	// Auto Slider Handler
+	if(autoswitch == true){
+		setInterval(nextSlide,autoswitch_speed);// call function and value 4000
+	}
+	
+	// Switch to next slide
+	function nextSlide(){
+		$('.active').removeClass('active').addClass('oldActive');
+		if($('.oldActive').is(':last-child')){
+			$('.slide').first().addClass('active');
+		} else {
+			$('.oldActive').next().addClass('active');
+		}
+		$('.oldActive').removeClass('oldActive');
+		$('.slide').fadeOut(speed);
+		$('.active').fadeIn(speed);
+	}
+	
+	// Switch to prev slide
+	function prevSlide(){
+		$('.active').removeClass('active').addClass('oldActive');
+		if($('.oldActive').is(':first-child')){
+			$('.slide').last().addClass('active');
+		} else {
+			$('.oldActive').prev().addClass('active');
+		}
+		$('.oldActive').removeClass('oldActive');
+		$('.slide').fadeOut(speed);
+		$('.active').fadeIn(speed);
+	}
+});
+
+
+</script> 
+
+
+</head>
+<body>
+
+
+<header>
+ <img class="logo" src="logo.png">
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#internships" > Internships</a></li>
+      <li><a href= "#campus_envoy"> Campus Envoy</a></li>
+	  <li><a href="#e-ideahub">E-IdeaHub</a></li>
+	  <li><a href="#contact">Contact</a></li>
+
+
+
+    </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
+</header>
+
+
+<div id="home" class="intro">
+<!-- end header -->
+<!-- section -->
+<div id="slider" class="section main_slider">
+  <div class="container-fuild">
+    <div class="row">
+      <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="classicslider1" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+        <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
+        <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+          <ul>
+            <li data-index="rs-1812" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="dream.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Dream Big" data-description="">
+              <!-- MAIN IMAGE -->
+              <img src="dream.jpg"  alt="#"  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+              <!-- LAYERS -->
+              <!-- LAYER NR. BG -->
+              <div class="tp-caption tp-shape tp-shapewrapper   rs-parallaxlevel-0" 
+                              id="slide-270-layer-1012" 
+                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+                              data-width="full"
+                              data-height="full"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;" 
+                              data-transform_out="s:300;s:300;" 
+                              data-start="750" 
+                              data-basealign="slide" 
+                              data-responsive_offset="on" 
+                              data-responsive="off"
+                              style="z-index: 5;background-color:rgba(0, 0, 0, 0.25);border-color:rgba(0, 0, 0, 0.50);"> </div>
+              <!-- LAYER NR. 1 -->
+              <div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme rs-parallaxlevel-0" 
+                              id="slide-18-layer-912" 
+                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                              data-y="['middle','middle','middle','middle']" data-voffset="['15','15','15','15']" 
+                              data-width="1000"
+                              data-height="122"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power4.easeInOut;" 
+                              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                              data-mask_in="x:0px;y:0px;" 
+                              data-mask_out="x:inherit;y:inherit;" 
+                              data-start="2000" 
+                              data-responsive_offset="on" 
+                              style="z-index: 5;background-color:rgba(29, 29, 29, 0.85);border-color:rgba(0, 0, 0, 0.50);"> </div>
+              <!-- LAYER NR. 2 -->
+              <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" 
+                              id="slide-18-layer-112" 
+                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+                              data-fontsize="['70','70','70','35']"
+                              data-lineheight="['70','70','70','50']"
+                              data-width="none"
+                              data-height="none"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="y:[-100%];z:0;rZ:35deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
+                              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                              data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
+                              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+                              data-start="1000" 
+                              data-splitin="chars" 
+                              data-splitout="none" 
+                              data-responsive_offset="on" 
+                              data-elementdelay="0.05" 
+                              style="z-index: 6; white-space: nowrap; ">Dream Big<br> let your passion Drive you!!</div>
+              <!-- LAYER NR. 3 -->
+              <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" 
+                              id="slide-18-layer-412" 
+                              data-x="['center','center','center','center']" data-hoffset="['10','10','10','10']" 
+                              data-y="['middle','middle','middle','middle']" data-voffset="['142','171','171','121']" 
+                              data-width="none"
+                              data-height="none"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                              data-transform_out="y:[100%];s:100;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                              data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+                              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+                              data-start="1500" 
+                              data-splitin="none" 
+                              data-splitout="none" 
+                              data-responsive_offset="on" 
+                              style="z-index: 7; white-space: nowrap;font-size:22px; font-weight:700; line-height:25px;"><br>Dreams are no one's Monopoly.<br>
+So we at Evolvex begun a platform <br>to turn your dreams into reality.<br> Join us and experience the best. </div>
+            </li>
+            <li data-index="rs-181" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="explore.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Explore" data-description="">
+              <!-- MAIN IMAGE -->
+              <img src="explore.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+              <!-- LAYERS -->
+              <!-- LAYER NR. BG -->
+              <div class="tp-caption tp-shape tp-shapewrapper   rs-parallaxlevel-0" 
+                              id="slide-270-layer-101" 
+                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+                              data-width="full"
+                              data-height="full"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;" 
+                              data-transform_out="s:300;s:300;" 
+                              data-start="750" 
+                              data-basealign="slide" 
+                              data-responsive_offset="on" 
+                              data-responsive="off"
+                              style="z-index: 5;background-color:rgba(0, 0, 0, 0.25);border-color:rgba(0, 0, 0, 0.50);"> </div>
+              <!-- LAYER NR. 1 -->
+              <div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme rs-parallaxlevel-0" 
+                              id="slide-18-layer-91" 
+                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                              data-y="['middle','middle','middle','middle']" data-voffset="['15','15','15','15']" 
+                              data-width="500"
+                              data-height="80"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power4.easeInOut;" 
+                              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                              data-mask_in="x:0px;y:0px;" 
+                              data-mask_out="x:inherit;y:inherit;" 
+                              data-start="2000" 
+                              data-responsive_offset="on" 
+                              style="z-index: 5;background-color:rgba(29, 29, 29, 0.85);border-color:rgba(0, 0, 0, 0.50); "> </div>
+              <!-- LAYER NR. 2 -->
+              <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" 
+                              id="slide-18-layer-11" 
+                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+                              data-fontsize="['70','70','70','35']"
+                              data-lineheight="['70','70','70','50']"
+                              data-width="none"
+                              data-height="none"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="y:[-100%];z:0;rZ:35deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
+                              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                              data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
+                              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+                              data-start="1000" 
+                              data-splitin="chars" 
+                              data-splitout="none" 
+                              data-responsive_offset="on" 
+                              data-elementdelay="0.05" 
+                              style="z-index: 6; white-space: nowrap;">EXPLORE </div>
+              <!-- LAYER NR. 3 -->
+              <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" 
+                              id="slide-18-layer-41" 
+                              data-x="['center','center','center','center']" data-hoffset="['10','10','10','10']"
+                              data-y="['middle','middle','middle','middle']" data-voffset="['142','171','171','121']" 
+                              data-width="none"
+                              data-height="none"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                              data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+                              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+                              data-start="1500" 
+                              data-splitin="none" 
+                              data-splitout="none" 
+                              data-responsive_offset="on" 
+                              style="z-index: 7; white-space: nowrap;font-size:22px; font-weight:700; line-height:25px;">Here is your first step to success.<br>Read books, surf 
+the internet. <br>Explore in a way no one has ever  <br> given a thought. </div>
+            </li>
+            <li data-index="rs-18" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="exp00.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Experiment" data-description="">
+              <!-- MAIN IMAGE -->
+              <img src="exp00.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+              <!-- LAYERS -->
+              <!-- LAYER NR. BG -->
+              <div class="tp-caption tp-shape tp-shapewrapper   rs-parallaxlevel-0" 
+                              id="slide-270-layer-10" 
+                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+                              data-width="full"
+                              data-height="full"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="opacity:0;s:1500;e:Power3.easeInOut;" 
+                              data-transform_out="s:300;s:300;" 
+                              data-start="750" 
+                              data-basealign="slide" 
+                              data-responsive_offset="on" 
+                              data-responsive="off"
+                              style="z-index: 5;background-color:rgba(0, 0, 0, 0.25);border-color:rgba(0, 0, 0, 0.50);"> </div>
+              <!-- LAYER NR. 1 -->
+              <div class="tp-caption tp-shape tp-shapewrapper   tp-resizeme rs-parallaxlevel-0" 
+                              id="slide-18-layer-9" 
+                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                              data-y="['middle','middle','middle','middle']" data-voffset="['15','15','15','15']" 
+                              data-width="500"
+                              data-height="90"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power4.easeInOut;" 
+                              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                              data-mask_in="x:0px;y:0px;" 
+                              data-mask_out="x:inherit;y:inherit;" 
+                              data-start="2000" 
+                              data-responsive_offset="on" 
+                              style="z-index: 5;background-color:rgba(29, 29, 29, 0.85);border-color:rgba(0, 0, 0, 0.50);"> </div>
+              <!-- LAYER NR. 2 -->
+              <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" 
+                              id="slide-18-layer-1" 
+                              data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                              data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
+                              data-fontsize="['70','70','70','35']"
+                              data-lineheight="['70','70','70','50']"
+                              data-width="none"
+                              data-height="none"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="y:[-100%];z:0;rZ:35deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
+                              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                              data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
+                              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+                              data-start="1000" 
+                              data-splitin="chars" 
+                              data-splitout="none" 
+                              data-responsive_offset="on" 
+                              data-elementdelay="0.05" 
+                              style="z-index: 6; white-space: nowrap; font-size:100px">EXPERIMENT </div>
+              <!-- LAYER NR. 3 -->
+              <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" 
+                              id="slide-18-layer-4" 
+                              data-x="['center','center','center','center']" data-hoffset="['10','10','10','10']" 
+                              data-y="['middle','middle','middle','middle']" data-voffset="['142','171','171','121']" 
+                              data-width="none"
+                              data-height="none"
+                              data-whitespace="nowrap"
+                              data-transform_idle="o:1;"
+                              data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+                              data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+                              data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+                              data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+                              data-start="1500" 
+                              data-splitin="none" 
+                              data-splitout="none" 
+                              data-responsive_offset="on" 
+                              style="z-index: 7; white-space: nowrap;  font-size:22px; font-weight:900; line-height:25px;"> Here's your second mantra
+ to <br> Success.  Experiment in all ways <br> possible, Success is not a One <br>time Story, You'll fail a <br>million 
+ times,But Never Give Up.</div>
+            </li>
+          </ul>
+          <div class="tp-static-layers"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+</div>
+
+
+
+
+		<div class="body">
+
+
+	<div class="container">
+			          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+
+		<div class="Box">
+			<div>
+				<i class="fas fa-laptop-code"></i>
+				<h2>Industry Based Learning</h2>
+				<p style="padding-top:10px">
+We provide the best quality Projects based on Real world scenarios that match the Corporate World.
+We Make sure our projects make great sense in the complete development of peers Which builds the overall Confidence and also adds Great weightage in Building your professional resumes.
+</p>
+			</div>
+		</div>
+		</div>
+		          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+
+		<div class="Box">
+			<div>
+				<i class="fas fa-users"></i>
+				<h2>Mentorship</h2>
+				<p style="padding-top:10px">
+Mentors are someone who mould your future. So, we at EvolveX are very keen on
+providing Mentors, who have world class Proficency and expertise in their Respective Domains.
+We provide One-on-One Mentorship so you can make your doubts been clarified by Subject experts.				</p>
+			</div>
+		</div>
+		</div>
+		          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+
+		<div class="Box">
+			<div>
+				<i class="fas fa-globe"></i>
+				<h2>E-IdeaHub</h2>
+				<p style="padding-top:10px">
+Any Big Thing you see today is born from a small idea of a guy with a determination to win.
+Here's a great platform for you to exchange your ideas,build your teams,and work for a goal.
+So we at EvolveX provide you a professional experience using slack for  interactions with your mates and mentors for 
+idea-Decoration.				</p>
+			</div>
+		</div>
+	</div>	
+</div>
+</div>
+
+
+
+
+<div id="internships" class="in_ben">
+
+<article>
+    <figure>
+        <img alt="brain" src="br.jpg" />
+    </figure>
+
+    <div>
+        <p>
+		<span style="color:white">EvolveX </span> <br>
+
+WE know how hard is it to get into an intern and to design a project.
+
+Here we are with a Brand new solution.
+
+Payments will never be a pain anymore as we are with you.
+
+To make sure we could reach to every student we tried our best to make sure you are not charged anymore expect for a Registration with EvolveX.
+
+Just Register with Us and you are done will be a part of us in our Journey.<br>
+
+Registration cost:299
+       </p>
+	   
+    </div>
+</article>
+
+
+
+<script>
+const article = document.querySelector('article');
+
+// to compute the center of the card retrieve its coordinates and dimensions
+const {
+  x, y, width, height,
+} = article.getBoundingClientRect();
+const cx = x + width / 2;
+const cy = y + height / 2;
+
+// following the mousemove event compute the distance betwen the cursor and the center of the card
+function handleMove(e) {
+  const { pageX, pageY } = e;
+
+  // ! consider the relative distance in the [-1, 1] range
+  const dx = (cx - pageX) / (width / 2);
+  const dy = (cy - pageY) / (height / 2);
+
+  // rotate the card around the x axis, according to the vertical distance, and around the y acis, according to the horizontal gap 
+  this.style.transform = `rotateX(${3 * dy * -1}deg) rotateY(${10 * dx}deg)`;
+}
+
+// following the mouseout event reset the transform property
+function handleOut() {
+  this.style.transform = 'initial';
+}
+
+article.addEventListener('mousemove', handleMove);
+article.addEventListener('mouseout', handleOut);
+
+
+
+
+</script>
+
+</div>
+
+
+
+
+
+
+  <div id="coniner">
+<h1 class="per_txt">Perks & Sample Certificate </h1>
+  
+			<div id="next" alt="Next" title="Next">
+				<div class="arrow-right"></div>
+			</div>
+			<div id="prev" alt="Prev" title="Prev">				
+				<div class="arrow-left"></div>
+			</div>			
+			<div id="slider">
+				<div class="slide">
+					<div class="slide-copy">
+					</div>
+					<div class="img1"></div>
+				</div>
+				
+				<div class="slide">
+					<div class="slide-copy">
+					</div>
+					<div class="img2"></div>
+				</div>
+				
+				
+				
+				
+			</div>
+			</div>
+
+
+
+
+<div   class="branch">
+ 
+
+		  
+		  
+		  
+		  <h2 style="text-align:center; font-weight:bold; color:#6f4a8e; font-size:37px; padding-top:10px;"> Internships Offered In </h2>
+<section class="cards-wrapper">
+  
+  		          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+
+  <div class="card-grid-space">
+    <a class="card" href="all_en\cse.html" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+      <div>
+        <h1>COMPUTER SCIENCE</h1>
+        <p>deals with design, implementation, and management of information system of both software & hardware processes</p>
+        <div class="tags">
+          <div class="tag">CHECK IT</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  </div>
+  
+    		          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+
+  <div class="card-grid-space">
+    <a class="card" href="all_en\all_enroll.html"  style="--bg-img: url('mech.jpg')">
+      <div>
+        <h1>MECHANICAL</h1>
+        <p>responsible for designing, building, installing and maintaining all kinds of mechanical machinery, tool and components.</p>
+        <div class="tags">
+          <div class="tag">ENROLL </div>
+        </div>
+      </div>
+    </a>
+  </div>
+  </div>
+    		          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+
+  <div class="card-grid-space">
+    <a class="card" href="all_en\all_enroll.html" style="--bg-img: url('civil.jpg')">
+      <div>
+        <h1>CIVIL</h1>
+        <p>deals with the design, construction, and maintenance of the physical and naturally built environment, including  works such as roads, bridges, canals, dams, airports, sewerage systems, pipelines, structural components of buildings, and railways</p>
+        <div class="tags">
+          <div class="tag">ENROLL</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  </div>
+    		          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+
+  <div class="card-grid-space">
+    <a class="card" href="all_en\all_enroll.html" style="--bg-img: url('eee.jpg')">
+      <div>
+        <h1>EEE</h1>
+        <p>the study, design and application of equipment, devices and systems which use electricity, electronics, and electromagnetism.</p>
+        <div class="tags">
+          <div class="tag">ENROLL</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  </div>
+    		          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+
+  <div class="card-grid-space">
+    <a class="card" href="all_en\Ece.html" style="--bg-img: url('ece.jpg')">
+      <div>
+        <h1>ECE</h1>
+        <p>deals with the electronic devices, circuits, communication equipments like transmitter, receiver, integrated circuits.</p>
+        <div class="tags">
+          <div class="tag">CHECK IT</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  </div>
+    		          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+
+  <div class="card-grid-space">
+    <a class="card" href="all_en\cse.html" style="--bg-img: url('it.jpg')">
+      <div>
+        <h1>Information Technology</h1>
+        <p>use of any computers, storage, networking and other physical devices, infrastructure and processes to create, process, store, secure and exchange all forms of electronic data.</p>
+        <div class="tags">
+          <div class="tag">CHECK IT</div>
+        </div>
+      </div>
+    </a>
+  </div>
+  </section>	  
+           
+</div>
+</div>
+	
+	
+	
+
+	   
+
+
+<div id="campus_envoy" class="tried">
+	   <section id="about">
+      <div class="container">
+
+       		  <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+
+<h1 class="c_e"> Campus Envoy</h1>
+       
+			
+			<img src="features-1.svg" class="img-fluid" alt="" >
+          
+		  
+          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.6s">
+           <div class="p1">
+		   <p>
+		   We at EvoloveX are Concerned with providing a way students earn and develop along with us,So we have taken an extra step in providing a Scheme called Campus Enovy for every peer who Registers with EvolveX . 
+ What can be more exciting than you providing an opportunity for your friends and peers.
+ Represent us in your campus, bring your friends along with you, so we all can grow Simultaneously.
+ We hope you will be with us in this Prestigious Project of Learning and Development.
+            </p>
+
+          </div>
+		  </div>
+		  
+        </div>
+          <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+
+		
+            <img src="features-2.png" class="img-fluid1" alt="">
+          
+
+          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.6s">
+           <div class="p2">
+		   <p>
+Are u excited about your involvement in Campus Envoy?
+Campus envoy brings you lots of perks and benefits. For every referral of yours, we will provide exciting vouchers and certificates.
+For best performers who reach our targets, we will be providing the certificate of marketing and exciting incentives and also recruit them as our permanent marketing manager.
+<br>
+So what are you waiting for? It's time for you to transform yourselves as a Campus Envoy.
+For more details please do <a id="a" href="tel:+918341033324" style="text-decoration:underline; cursor:pointer"> contact us </a>.            </p>
+           </div>
+          </div>
+		  
+		  <div>
+	 <a href="all_en\all_enroll.html"  class="but">Register</a></div>
+      </div>
+		  
+          </div>
+     
+        </div>
+
+      
+      </div>
+    </section><!-- #about -->
+	
+</div>
+	  
+
+	<script>  
+	 (function ($) {
+  "use strict";
+
+ 
+
+  // Initiate the wowjs animation library
+  new WOW().init();
+ 
+
+})(jQuery);
+
+</script> 
+
+
+
+
+
+<div id="e-ideahub" class="an">
+
+
+<div class="view">
+  <div class="plane main">
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+    <div class="point"></div>
+  </div>
+</div>
+
+
+          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.6s">
+<h1 class="hd"><span style="color:black">E</span><span style="color:red">-</span><span style="color:orange">Idea</span><span style="color:green">Hub</span></h1>
+
+<p class="pp">
+We at EvolveX have launched a new kind of platform called E-IdeaHub.
+E-IdeaHub  is a place where <br> you can share your unique ideas and thoughts. Through E-IdeaHub,  we convert your idea live into the  <br>society and make it a reality.
+EvolveX is ready to support your  ideas by providing sponsorship  through collaborated organizations and E-IdeaHub.<br>
+<br>
+An idea can change your life. So what are you waiting for, post your idea and keeping rocking. <br> We are here to support and bring a change.
+
+Hope our idea excites you!!!
+
+	 <a href="all_en\all_enroll.html"  class="but_1">Post Your Idea</a></div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+	  
+	  
+<div  id="contact" class="contact">
+          <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.6s">
+
+<div class="loading">
+<span>
+  <a id="a" href="mailto:bhanu.beings26@gmail.com">Email EvolveX</a><br><br>
+  
+<a id="a" href="tel:+918341033324">Call EvoloveX</a>
+</span>
+</div>
+
+<div id="wrapper"><h1>Get In Touch</h1></div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="tst">
+
+<section id="testim" class="testim">
+         <div class="testim-cover">
+            <div class="wrap">
+
+                <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+                <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+                <ul id="testim-dots" class="dots">
+                    <li class="dot active"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li><!--
+                    --><li class="dot"></li>
+                </ul>
+                <div id="testim-content" class="cont1">
+                    
+                    <div class="active">
+                        <div class="img"><img src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/kartik-aaryan-1045198-08-12-2017-06-34-11.jpg" alt=""></div>
+                        <h2>Shraavya Reddy</h2>
+                        <p>Thank you Evolvex it helped me a lot I appreciate your idea of giving internship at an affordable price and including range of basic domains to advanced ones.
+						I’ve enrolled for  machine learning and I’m very much satisfied with constant mentor support and encouraged me</p>                                      
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://timesofindia.indiatimes.com/thumb/msid-75752690,width-800,height-600,resizemode-4/75752690.jpg" alt=""></div>
+                        <h2>ts2</h2>
+                        <p>content    </p>                                      
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="https://p16.muscdn.com/img/musically-maliva-obj/1627333501517830~c5_720x720.jpeg" alt=""></div>
+                        <h2>ts3</h2>
+                        <p>good   </p>                                     
+                    </div>
+
+                    <div>
+                       <div class="img"><img src="" alt="img"></div>
+                        <h2>ts4</h2>
+                        <p>content   </p>                                    
+                    </div>
+
+                    <div>
+                        <div class="img"><img src="" alt="img"></div>
+                        <h2>ts5</h2>
+                        <p>comments</p>                                   
+                    </div>
+ 
+                </div>
+
+            </div>
+         </div>
+    </section>
+</div>
+<script src="https://use.fontawesome.com/1744f3f671.js"></script>
+<script>
+// vars
+'use strict'
+var	testim = document.getElementById("testim"),
+		testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+    testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+    testimLeftArrow = document.getElementById("left-arrow"),
+    testimRightArrow = document.getElementById("right-arrow"),
+    testimSpeed = 4500,
+    currentSlide = 0,
+    currentActive = 0,
+    testimTimer,
+		touchStartPos,
+		touchEndPos,
+		touchPosDiff,
+		ignoreTouch = 30;
+;
+
+window.onload = function() {
+
+    // Testim Script
+    function playSlide(slide) {
+        for (var k = 0; k < testimDots.length; k++) {
+            testimContent[k].classList.remove("active");
+            testimContent[k].classList.remove("inactive");
+            testimDots[k].classList.remove("active");
+        }
+
+        if (slide < 0) {
+            slide = currentSlide = testimContent.length-1;
+        }
+
+        if (slide > testimContent.length - 1) {
+            slide = currentSlide = 0;
+        }
+
+        if (currentActive != currentSlide) {
+            testimContent[currentActive].classList.add("inactive");            
+        }
+        testimContent[slide].classList.add("active");
+        testimDots[slide].classList.add("active");
+
+        currentActive = currentSlide;
+    
+        clearTimeout(testimTimer);
+        testimTimer = setTimeout(function() {
+            playSlide(currentSlide += 1);
+        }, testimSpeed)
+    }
+
+    testimLeftArrow.addEventListener("click", function() {
+        playSlide(currentSlide -= 1);
+    })
+
+    testimRightArrow.addEventListener("click", function() {
+        playSlide(currentSlide += 1);
+    })    
+
+    for (var l = 0; l < testimDots.length; l++) {
+        testimDots[l].addEventListener("click", function() {
+            playSlide(currentSlide = testimDots.indexOf(this));
+        })
+    }
+
+    playSlide(currentSlide);
+
+    // keyboard shortcuts
+    document.addEventListener("keyup", function(e) {
+        switch (e.keyCode) {
+            case 37:
+                testimLeftArrow.click();
+                break;
+                
+            case 39:
+                testimRightArrow.click();
+                break;
+
+            case 39:
+                testimRightArrow.click();
+                break;
+
+            default:
+                break;
+        }
+    })
+		
+		testim.addEventListener("touchstart", function(e) {
+				touchStartPos = e.changedTouches[0].clientX;
+		})
+	
+		testim.addEventListener("touchend", function(e) {
+				touchEndPos = e.changedTouches[0].clientX;
+			
+				touchPosDiff = touchStartPos - touchEndPos;
+			
+				console.log(touchPosDiff);
+				console.log(touchStartPos);	
+				console.log(touchEndPos);	
+
+			
+				if (touchPosDiff > 0 + ignoreTouch) {
+						testimLeftArrow.click();
+				} else if (touchPosDiff < 0 - ignoreTouch) {
+						testimRightArrow.click();
+				} else {
+					return;
+				}
+			
+		})
+}
+
+
+</script>
+
+
+
+
+
+
+
+<div class="whatsapp">
+<a href="https://api.whatsapp.com/send?phone=918341033324" target="_blank">    
+<h5><i class="fa fa-whatsapp fa-3x " aria-hidden="true"></i></h5></a>
+                </div>
+
+
+
+<footer class="footer-distributed">
+<h3 class="lst_txt" ><span style="color:white">Evolve</span>X</h3>
+
+		<div class="footer-right">
+
+				
+			<a href="https://twitter.com/share?url=[post-url]&text=[post-title]" class="twitter-btn">
+			<i class="fab fa-twitter"></i>
+			</a>
+			
+			<a href="https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]" class="linkedin-btn">
+			<i class="fab fa-linkedin"></i>
+			</a>
+ 
+						
+
+			<a href="https://wa.me/?text=${postTitle} ${postUrl}`" class="whatsapp-btn">
+			<i class="fab fa-whatsapp"></i>
+			</a>
+</div>
+
+
+
+
+<div class="footer-left">
+
+				<p class="footer-links">
+					<a class="link-1" href="#home">Home</a>
+
+
+
+					<a href="#">Enroll</a>
+					<a href="mailto:bhanu.beings26@gmail.com">Contact</a>
+				</p>
+
+				<!-- <p>EvolveX private limited &copy; 2020</p> -->
+			</div>
+			
+
+				<!-- <p>EvolveX private limited &copy; 2020</p> -->
+		</div>
+		
+			
+		</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+	<!-- #services -->
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+<!-- end footer -->
+<!-- js section -->
+<script src="js/jquery.min.js"></script>
+<!-- menu js -->
+<script src="js/menumaker.js"></script>
+<!-- wow animation -->
+<script src="js/wow.js"></script>
+<!-- custom js -->
+<script src="js/custom.js"></script>
+<!-- revolution js files -->
+<script src="revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
+<!-- map js -->
+
+</body>
+</html>
