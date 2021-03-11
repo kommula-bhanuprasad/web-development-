@@ -1,0 +1,23 @@
+body{
+	background-image: url(" http://atgbcentral.com/data/out/105/4858584-hd-wallpaper-car.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	
+}
+
+
+h1{
+	color:RED;
+}
+.txt{
+ position:relative;
+	bottom:38px;
+	left:240px;
+	width:300px;
+	
+	
+}
+.in{
+	height:25px;
+	width:50px;
+}
